@@ -1,0 +1,26 @@
+{
+  "name": "JsonAnalyser",
+  "version": "0.0.0",
+  "authors": [
+    "Sundeep Narang <sundeepnrng@gmail.com>"
+  ],
+  "description": "Shows a JSON data types, to easily define types in other languages.",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "JSON",
+    "Parser",
+    "Analyser"
+  ],
+  "license": "MIT",
+  "homepage": "sundeepnarang.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
