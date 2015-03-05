@@ -24,7 +24,5 @@ function parse(key,data,indent,indentInc){
     return output;
 }
 
-parse('',data[0],'    ','    ');
-
-
-module.exports = parse;
+exports.output = output;
+exports.parse = parse;

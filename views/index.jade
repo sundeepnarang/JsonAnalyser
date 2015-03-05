@@ -1,5 +1,16 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+    .jumbotron
+        .container
+            .page-header
+                h1 JSON Analyser
+            br
+            form#json
+                .form-group
+                    label(for='key') Name of JSON
+                    input.form-control(type='text', name='key', id='key',placeholder='JSON name')
+                .form-group
+                    label(for='body') JSON
+                    textarea.form-control(name='body', id='body', Placeholder='Paste/type your JSON Object', rows=20)
+                button.btn.btn-primary(type='button', onclick='send()') Analyse
