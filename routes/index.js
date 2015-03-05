@@ -13,8 +13,7 @@ router.post('/parse',function(req,res){
     }
     try{
         var data = JSON.parse(req.body.body);
-        var parsedJSON = parse.parse(key,data,'    ','    ');
-        parse.output = '';
+        var parsedJSON = parse(key,data,'    ','    ',true);
         res.send(parsedJSON);
     }catch(e) {
         res.send('Invalid Json');

@@ -5,9 +5,9 @@
  * Created by Sundeep on 3/5/2015.
  */
 var output = '';
-function parse(key,data,indent,indentInc){
+function parse(key,data,indent,indentInc,flag){
     if(!key){
-        key = "'NO NAME POROVIDED'";
+        key = "'NO NAME PROVIDED'";
     }
     var datatype = typeof(data);
     if(datatype=="object"){
@@ -16,13 +16,17 @@ function parse(key,data,indent,indentInc){
         }
         output=output+indent+key+" - "+datatype+"\n";
         for(key in data){
-            parse(key,data[key],indent+indentInc,indentInc);
+            parse(key,data[key],indent+indentInc,indentInc,false);
         }
     }else{
         output=output+indent+key+" - "+datatype+"\n";
     }
-    return output;
+    if(flag){
+        var temp = output
+        output = '';
+        return temp;
+    }
+
 }
 
-exports.output = output;
-exports.parse = parse;
+module.exports = parse;
